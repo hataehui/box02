@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" conten divt="width=device-width, initial-scale=1.0">
+    <title>박스 스타일</title>
+    <style>
+       *{
+           box-sizing: border-box;
+           margin: 0;
+           border: none;
+           padding: 0;
+       }
+       .clearfix::after{
+           content: '';
+           display: block;
+           clear: both;
+       }
+       .box::after{
+           content: '';
+           display: block;
+           clear: both;
+       }
+       .box{
+           width: 700px;
+           margin: 0 auto;
+           padding: 50px;
+           background-color: yellow;
+       }
+       .child-box{
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            float: left;
+        }
+        .box01{background-color: red;}
+        .box02{background-color: green;}
+        .box03{background-color: blue;}
+    </style>
+</head>
+<body>
+    <h1>박스의 구조</h1>
+    <div class="box clearfix"></div>
+    <div class="child-box box01">박스1</div>
+    <div class="child-box box02">박스2</div>
+    <div class="child-box box03">박스3</div>
+</body>
+</html>
